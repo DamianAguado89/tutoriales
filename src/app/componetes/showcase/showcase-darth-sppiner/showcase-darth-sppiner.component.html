@@ -1,0 +1,19 @@
+<div>
+
+  <div>
+    {{'Modo actual' + (embedded ? 'Embebido' : 'No embebido')}}
+  </div>
+
+  <div>
+    <button (click)="activarSpinner()">Activar spinner</button>
+    <button (click)="cambiarModo()">Cambiar modo</button>
+  </div>
+
+  <div class="embedded">
+    <darth-spinner *ngIf="embedded" [embedded]="true"></darth-spinner>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, voluptatum magnam totam illo consequatur autem repudiandae facere animi exercitationem tenetur. Quas in architecto at nulla fugit necessitatibus obcaecati illum nihil!</p>
+  </div>
+
+  <darth-spinner *ngIf="!embedded"></darth-spinner>
+
+</div>

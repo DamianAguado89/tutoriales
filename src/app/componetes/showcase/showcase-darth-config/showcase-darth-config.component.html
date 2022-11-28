@@ -1,0 +1,22 @@
+<div>
+  <h3>Recoger un valor simple</h3>
+  <p>
+    {{'variable1' | darthConfig}}
+  </p>
+
+  <h3>Recoger un valor anidado</h3>
+  <p>
+    {{'variable3.subvariable1' | darthConfig}}
+  </p>
+
+  <h3>Mostrar un valor segun un estado</h3>
+  <p *ngIf="'showElement' | darthConfig">
+    Me puedo mostrar
+  </p>
+
+  <h3>Mostrar un valor segun un estado</h3>
+  <p *ngFor="let item of ('values' | darthConfig)">
+    {{item.label +' - '+ item.value}}
+  </p>
+
+</div>

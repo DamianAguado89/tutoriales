@@ -1,0 +1,41 @@
+<div class="darth-block-list row">
+  <div class="col-12">
+
+    <div class="row" *ngIf="blockItems?.length == 0">
+      <div class="col-12 text-center">
+        <span>{{labelNoResults}}</span>
+      </div>
+    </div>
+    <div class="row" *ngIf="blockItems?.length > 0">
+      <div class="col-12">
+        <darth-block-list-item *ngFor="let blockItem of blockItems  paginate: { itemsPerPage: pagination, currentPage: page }; let index = index"
+        [blockItem] = "blockItem"
+        [id]="'block-item-'+index"
+        [showHeader]="showHeader"
+        [showInfoAdditional] = "showInfoAdditional"
+        [showActions] = "showActions"
+        [showBorder] = "showBorder"
+        [templateHeader] = "templateHeader"
+        [templateInfoAdditional] = "templateInfoAdditional"
+        [templateData] = "templateData"
+        (actionSelected)="sendAction($event)"
+        (closeOptions)="closeAllOptionsExcept($event)"
+        (click)="selectItem(blockItem)"
+        >
+
+        </darth-block-list-item>
+      </div>
+    </div>
+    <!-- pagination -->
+    <div class="row">
+      <div class="col-12 p-4 text-center">
+        <pagination-controls
+       
+        (pageChange)="page = $event">
+      </pagination-controls>
+      </div>
+    </div>
+    
+  </div>
+
+</div>

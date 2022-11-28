@@ -1,0 +1,28 @@
+{
+  "name": "darth-library",
+  "version": "14.7.1",
+  "peerDependencies": {
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0"
+  },
+  "author": {
+    "email": "damianaguado996@gmail.com",
+    "name": "Damian Aguado"
+  },
+  "description": "Biblioteca de componentes de disco duro de roer",
+  "keywords": [
+    "angular",
+    "ejemplo",
+    "biblioteca"
+  ],
+  "repository": {
+    "url": "https://github.com/DamianAguado89"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "font-awesome": "^4.7.0",
+    "lodash-es": "^4.17.0",
+    "ngx-pagination": "^5.1.1",
+    "tslib": "^2.3.0"
+  }
+}

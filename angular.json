@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "82934cea-7cee-4d74-a59e-990c4d54bd7b"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -28,12 +31,18 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {"glob":"**/*", "input": "node_modules/darth-library/resources/img", "output": "resources/img/"}
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -105,7 +114,68 @@
           }
         }
       }
+    },
+    "darthAguado": {
+      "projectType": "library",
+      "root": "projects/darth-aguado",
+      "sourceRoot": "projects/darth-aguado/src",
+      "prefix": "darth",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/darth-aguado/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/darth-aguado/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/darth-aguado/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/darth-aguado/src/test.ts",
+            "tsConfig": "projects/darth-aguado/tsconfig.spec.json",
+            "karmaConfig": "projects/darth-aguado/karma.conf.js"
+          }
+        }
+      }
+    },
+    "darth-library": {
+      "projectType": "library",
+      "root": "projects/darth-library",
+      "sourceRoot": "projects/darth-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/darth-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/darth-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/darth-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/darth-library/src/test.ts",
+            "tsConfig": "projects/darth-library/tsconfig.spec.json",
+            "karmaConfig": "projects/darth-library/karma.conf.js"
+          }
+        }
+      }
     }
-  },
-  "defaultProject": "tutoBoost"
+  }
 }

@@ -1,0 +1,71 @@
+.bienvenidos{
+    background:url("../assets/img/pelu.jpg");
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+app-nav-bar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 4rem;
+    z-index: 2;
+}
+
+main{
+    position: absolute;
+    width: 100%;
+    top: 4rem;
+    z-index: 1;
+}
+
+app-side-menu{
+    position: absolute;
+    left: 0rem;
+    width: 60px;
+    height: calc(100vh - 4rem);
+    box-shadow: 0px 0px 10px rbga(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.55);
+    border-top: 1px solid white;
+    overflow-x: hidden;
+    white-space: nowrap;
+    transition: width 250ms ease-in;
+}
+
+.app-side-menu-open{
+    width: 250px;
+}
+
+.display-area{
+    position: absolute;
+    left: 60px;
+    top: 50px;
+    width: calc(100% - 60px);
+    transition: left 250ms ease-in, width 250ms ease-in;
+}
+
+.display-area-shrink{
+    left: 250px;
+    top: 50px;
+    width: calc(100% - 250px);
+}
+
+.text-bievenido {
+    margin-top: 6.5rem;
+}
+
+.btn-primary {
+    background-color: #f17d6b;
+    border-color: #6b3833;
+    transition: all .5s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e2a79e;
+    border-color: #6b3833;
+}
+
+.rutas {
+    margin-top: 5rem;
+}

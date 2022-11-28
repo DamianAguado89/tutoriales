@@ -1,0 +1,8 @@
+<div>
+  <darth-dropdown [options]="options" [valueSelect]="valueSelect" (select)="select($event)">
+    <ng-template itemTemplate let-item="item">
+      {{item.label + " - " + item.value}}
+    </ng-template>
+    
+  </darth-dropdown>
+</div>

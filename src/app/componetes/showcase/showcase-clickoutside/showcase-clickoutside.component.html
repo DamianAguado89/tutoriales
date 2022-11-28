@@ -1,0 +1,16 @@
+<div>
+  <p>{{'Modo actual: '+mode}}</p>
+  <button (click)="openEstandar()">Estandar</button>
+  <button (click)="openDelay()">Delay</button>
+  <button (click)="openDesactived()">Desactivated</button>
+
+  <div *ngIf="mode === 'estandar'" class="block" DarthClickOutside (clickOutside)="clickOutside($event)">
+    <p>Click outside</p>
+  </div>
+  <div *ngIf="mode === 'delay'" class="block" DarthClickOutside (clickOutside)="clickOutside($event)" [clickOutsideDelay]="5000">
+    <p>Click outside</p>
+  </div>
+  <div *ngIf="mode === 'desactivated'" class="block" DarthClickOutside (clickOutside)="clickOutside($event)" [clickOutsideEnabled]="false">
+    <p>Click outside</p>
+  </div>
+</div>

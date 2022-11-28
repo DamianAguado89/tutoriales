@@ -1,0 +1,24 @@
+{
+  "name": "darth-aguado",
+  "version": "14.0.1",
+  "author": {
+    "email": "damianaguado996@gmail.com",
+    "name": "Damian Aguado"
+  },
+  "description": "Ejemplo proyecto biblioteca",
+  "keywords": [
+    "angular",
+    "ejemplo",
+    "biblioteca"
+  ],
+  "repository": {
+    "url": "https://github.com/DamianAguado89"
+  },
+  "peerDependencies": {
+    "@angular/common": "^14.0.0-next.0",
+    "@angular/core": "^14.0.0-next.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

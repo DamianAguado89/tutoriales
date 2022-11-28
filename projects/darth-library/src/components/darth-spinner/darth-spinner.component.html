@@ -1,0 +1,10 @@
+<div class="darth-spinner" 
+  *ngIf="darthSpinner.show"
+  [ngClass]="{
+    'darth-spinner--overlay': !embedded, 
+    'darth-spinner--everlay-embedded': embedded
+  }">
+  <div class="darth-spinner__spinner">
+    <img [src]="pathImg">
+  </div>
+</div>
