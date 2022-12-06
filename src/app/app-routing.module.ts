@@ -12,6 +12,7 @@ import { ShowcaseDarthSppinerComponent } from './componetes/showcase/showcase-da
 import { ShowcaseDarthToastComponent } from './componetes/showcase/showcase-darth-toast/showcase-darth-toast.component';
 import { ShowcaseDarthAguadoComponent } from './componetes/showcase/showcase-darthAguado/showcase-darthAguado.component';
 import { TurnComponent } from './componetes/turns/turn/turn.component';
+import { CounterComponent } from './contador/counter/counter.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'turn', 
     loadChildren: () => import('../app/componetes/turns/turns.module').then(m => m.TurnsModule)
+  },
+  {
+    path: 'courses',
+    loadChildren: () => import('../app/course/course.module').then(m => m.CourseModule)
   },
   {
     path: 'darthAguado',
@@ -59,6 +64,10 @@ const routes: Routes = [
   {
     path: 'darth-block-list',
     component: ShowcaseDarthBlockListComponent
+  },
+  {
+    path: 'counter',
+    component: CounterComponent
   }
   
 ];
